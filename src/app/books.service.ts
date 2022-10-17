@@ -8,7 +8,7 @@ export class BooksService {
   
   constructor() { }
 
-  getBooksList():book[]{
+  getBooksList(): book[] {
     return [
       {
         id:1,

@@ -7,7 +7,7 @@ import { book } from '../../models/book';
   styleUrls: ['./book-item.component.css']
 })
 export class BookItemComponent implements OnInit {
-@Input() bookItem:book;
+  @Input() bookItem:book;
   constructor() { 
     this.bookItem={
       id:0,
