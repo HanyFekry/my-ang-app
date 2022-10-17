@@ -1,0 +1,24 @@
+<p>books works!</p>
+<h3> problem  with the service</h3>
+<div  *ngFor="let b of books">
+    <label>SN</label><input type="text" disabled value="{{b.id}}" /><br />    
+    <label>title</label><b><i><input type="text" disabled value="{{b.title}}" /></i></b><br />
+    <label>auther</label><input type="text" disabled value="{{b.auther}}" /><br />
+    <label>price</label><input type="text" disabled value="{{b.price}}" /><br />
+    <hr>
+</div>
+<table>
+    <tr *ngFor="let bookItem of books">
+        <td>{{bookItem.id}}</td>
+        <td>{{bookItem.title}}</td>
+        <td>{{bookItem.auther}}</td>
+        <td>{{bookItem.price}}</td>
+    </tr>
+</table>
+<ul *ngFor="let b of books">
+    <li>sn: {{b.id}}</li>
+    <li>title: {{b.title}}</li>
+    <li>auther: {{b.auther}}</li>
+    <li>price: {{b.price}}</li>
+</ul>
+<!-- <app-book-item *ngFor="let b of books" [bookItem]="b" ></app-book-item> -->
