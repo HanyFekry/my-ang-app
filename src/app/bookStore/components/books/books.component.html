@@ -7,18 +7,28 @@
     <label>price</label><input type="text" disabled value="{{b.price}}" /><br />
     <hr>
 </div>
-<table>
+<table class="table table-hover table-striped table-info">
+    <tr>
+        <th>SN</th>
+        <th>Title</th>
+        <th>Auther</th>
+        <th>Price</th>
+    </tr>
+    <tbody>
     <tr *ngFor="let bookItem of books">
         <td>{{bookItem.id}}</td>
         <td>{{bookItem.title}}</td>
         <td>{{bookItem.auther}}</td>
-        <td>{{bookItem.price}}</td>
+        <td><p >{{bookItem.price>100}}?<b>{{bookItem.price}}</b>:{{bookItem.price}}</p></td>
     </tr>
+</tbody>
 </table>
-<ul *ngFor="let b of books">
-    <li>sn: {{b.id}}</li>
-    <li>title: {{b.title}}</li>
-    <li>auther: {{b.auther}}</li>
-    <li>price: {{b.price}}</li>
+<div fxLayout="row-reverse" fxLayoutAlign="center">
+<ul *ngFor="let b of books" class="list-group">
+    <li class="list-group-item">sn: {{b.id}}</li>
+    <li class="list-group-item">title: {{b.title}}</li>
+    <li class="list-group-item">auther: {{b.auther}}</li>
+    <li class="list-group-item">price: {{b.price}}</li>
 </ul>
+</div>
 <!-- <app-book-item *ngFor="let b of books" [bookItem]="b" ></app-book-item> -->

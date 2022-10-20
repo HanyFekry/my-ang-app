@@ -6,13 +6,15 @@ import { AboutComponent } from './components/about/about.component';
 import { PhotosComponent } from './photos/photos.component';
 import { HomeComponent } from './home/home.component';
 import { BooksComponent } from './bookStore/components/books/books.component';
+import { PostsComponent } from './blogs/posts/posts.component';
 
 const routes: Routes = [
   { path: '', component:HomeComponent},
   { path: 'movies', component: MoviesComponent },
   { path: 'about', component: AboutComponent },
   { path: 'Pictures', component: PhotosComponent },
-  { path: 'books', component: BooksComponent}
+  { path: 'books', component: BooksComponent},
+  { path: 'posts', component: PostsComponent}
 ];
 
 

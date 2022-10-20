@@ -5,8 +5,8 @@
 <p>{{movieItem.duration}}</p>
 <b><i>votes: {{movieItem.votes}}</i></b>
 <br />
-<button (click)="UpVote(movieItem)" style="width: 80px;height:50px;" ><h3>+</h3></button>&nbsp;
-<button (click)="DownVote(movieItem)" style="width: 80px;height:50px;"><h3>-</h3></button>&nbsp;
-<button (click)="hideMovieInChild(movieItem)" style="width: 100px;height:50px;"><h4>hide movie</h4></button>&nbsp;
-<button *ngIf="movieItem.isFavourite===false" (click)="marked.emit(movieItem)" style="width: 100px;height:50px;"><h4>like</h4></button>
-<button *ngIf="movieItem.isFavourite===true" (click)="marked.emit(movieItem)" style="width: 100px;height:50px;background-color: red;"><h4>unlike</h4></button>
+<button (click)="UpVote(movieItem)" class="btn btn-primary" >+</button>&nbsp;
+<button (click)="DownVote(movieItem)"  class="btn btn-secondary">-</button>&nbsp;
+<button (click)="hideMovieInChild(movieItem)" class="btn btn-info">hide movie</button>&nbsp;
+<button *ngIf="movieItem.isFavourite===false" (click)="marked.emit(movieItem)" class="btn btn-primary">like</button>
+<button *ngIf="movieItem.isFavourite===true" (click)="marked.emit(movieItem)" class="btn btn-danger">unlike</button>

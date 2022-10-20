@@ -10,6 +10,12 @@ import { MovieItemComponent } from './components/movie-item/movie-item.component
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { BookStoreModule } from './bookStore/modules/book-store.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { PostsComponent } from './blogs/posts/posts.component';
+import { HttpClientModule } from "@angular/common/http";
+import { CreateMovieComponent } from './components/create-movie/create-movie.component';
+import { FormsModule } from '@angular/forms';
 // import { BooksComponent } from './bookStore/components/books/books.component';
 // import { BookItemComponent } from './bookStore/components/book-item/book-item.component';
 
@@ -20,13 +26,19 @@ import { BookStoreModule } from './bookStore/modules/book-store.module';
     AboutComponent,
     MoviesComponent,
     MovieItemComponent,
-    HomeComponent
+    HomeComponent,
+    PostsComponent,
+    CreateMovieComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
     //,AppRoutingModule
-    ,BookStoreModule
+    BookStoreModule,
+    NgbModule,
+    FlexLayoutModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

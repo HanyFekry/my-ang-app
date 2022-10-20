@@ -3,11 +3,28 @@
 <h2>header</h2>
 <p>this is site header</p>
 <!-- <app-photos></app-photos> -->
-<nav>
-    <a routerLink="/">home</a><br>
-    <a routerLink="/about">about us</a><br>
-    <a routerLink="/movies">movies</a><br>
-    <a routerLink="/Pictures">photos</a><br>
-    <a routerLink="/books">books</a><br>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <ul class="navbar-nav me-auto">
+    <li class="nav-item">
+    <a routerLink="/" class="nav-link">home</a>
+    </li>
+    <li class="nav-item">
+    <a routerLink="/about" class="nav-link">about us</a>
+    <li class="nav-item">
+    <a routerLink="/movies" class="nav-link">movies</a>
+</li>
+    <li class="nav-item">
+    <a routerLink="/Pictures" class="nav-link">photos</a>
+</li>
+    <li class="nav-item">
+    <a routerLink="/books" class="nav-link">books</a>
+</li>
+    <li class="nav-item">
+    <a routerLink="/posts" class="nav-link">Posts</a>
+</li>
+</ul>
 </nav>
+<div class="container">
 <router-outlet></router-outlet>
+</div>

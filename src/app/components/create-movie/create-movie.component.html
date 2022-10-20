@@ -1,0 +1,51 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="id" class="col-2">Id</label>
+        <div class="col-4">
+            <input type="text" name="id" [(ngModel)]="id" class="formcontrol" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title" class="col-2">title</label>
+        <div class="col-4">
+            <input type="text" name="title" [(ngModel)]="title" class="formcontrol" placeholder="enter title" required
+                #movieTitle="ngModel" minlength="3" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="duration" class="col-2">duration</label>
+        <div class="col-4">
+            <input type="text" name="duration" [(ngModel)]="duration" class="formcontrol"
+                placeholder="enter duration" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="category" class="col-2">category</label>
+        <div class="col-4">
+            <input type="text" name="category" [(ngModel)]="category" class="formcontrol"
+                placeholder="enter category" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="votes" class="col-2">votes</label>
+        <div class="col-4">
+            <input type="text" name="votes" [(ngModel)]="votes" class="formcontrol" placeholder="enter votes" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title" class="col-2">is Favourite</label>
+        <div class="col-4">
+            <input type="checkbox" name="isFavourite" [(ngModel)]="isFavourite" class="formcontrol"
+                (change)="isFavourite =!isFavourite" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-4 text-center">
+            <button type="submit" value="Save" class="btn btn-primary" [disabled]="form.invalid">Save</button>
+        </div>
+    </div>
+</form>
+<div *ngIf="movieTitle.invalid && movieTitle.dirty">
+    <small class="error-msg" *ngif="movieTitle.errors.required">*</small>
+    <small class="error-msg" *ngif="movieTitle.errors.minlength">enter title more than 3 letters</small>
+</div>

@@ -1,18 +1,32 @@
 <p>movies works!</p>
 <br />
-<table style="width: 100%;">
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>duration</th>
-        <th>Category</th>
-    </tr>
-    <tr style="text-align: center;" *ngFor="let m of movies">
-<td>{{m.id}}</td>
-<td *ngIf="m.title==='home a lone'"><b> {{m.title}}</b></td>
-<td *ngIf="m.title!='home a lone'"> {{m.title}}</td>
-<td>{{m.duration}}</td>
-<td>{{m.category}}</td>
-    </tr>
-</table>
-<app-movie-item *ngFor="let m of movies" [movieItem]="m" (HideMovie)="hideMovieInParent($event)" (marked)="mark($event)"></app-movie-item>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-hover table-striped table-success">
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>duration</th>
+                <th>Category</th>
+            </tr>
+            <tbody>
+                <tr style="text-align: center;" *ngFor="let m of movies">
+                    <td>{{m.id}}</td>
+                    <td>
+                        <p *ngIf="m.title==='home a lone'"><b> {{m.title}}</b></p>
+                        <p *ngIf="m.title!='home a lone'"> {{m.title}}</p>
+                    </td>
+                    <td>{{m.duration}}</td>
+                    <td>{{m.category}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-4 offset-2">
+        <div class="container">
+            <app-create-movie (addMovie)="pushMovie($event)"></app-create-movie>
+        </div>
+    </div>
+</div>
+<app-movie-item *ngFor="let m of movies" [movieItem]="m" (HideMovie)="hideMovieInParent($event)"
+    (marked)="mark($event)"></app-movie-item>

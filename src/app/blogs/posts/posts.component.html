@@ -1,0 +1,39 @@
+<p>posts works!</p>
+<!-- <ul *ngFor="let p of postslist">
+    <li>{{p.userId}}</li>
+    <li>{{p.id}}</li>
+    <li>{{p.title}}</li>
+    <li>{{p.body}}</li>
+</ul> -->
+<div class="row">
+    <div class="col-lg-4" *ngFor="let p of postslist">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6">{{p.userId}}</div>
+                    <div class="col-6 text-right">{{p.id}}</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{p.title}}</h4>
+                <p class="card-text">{{p.body}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-4" *ngFor="let c of comments">
+        <div class="card border-danger mb-3" style="max-width: 20rem;">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-6">{{c['postId']}}</div>
+                    <div class="col-6 text-right">{{c['id']}}</div>
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{c['email']}}</h4>
+                <p class="card-text">{{c['body']}}</p>
+            </div>
+        </div>
+    </div>
+</div>
